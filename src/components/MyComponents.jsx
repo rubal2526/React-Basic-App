@@ -7,6 +7,7 @@ class MyComponents extends Component {
         value: 0,
     };
     //event handler 함수선언
+    // handleDecrement = function (){   
     handleDecrement = () => {
       this.setState({
         value: this.state.value - 1
@@ -16,6 +17,7 @@ class MyComponents extends Component {
         //desrtucring assignment
         const { name,age } = this.props;
         const { value } = this.state;
+        const { handleDecrement } = this;
 
         return (
             <div>
@@ -25,7 +27,7 @@ class MyComponents extends Component {
                 <button onClick={() => (
                     this.setState({value: value + 1})
                 )}>증가</button>
-                <button onClick={this.handleDecrement}>감소</button>
+                <button onClick={handleDecrement}>감소</button>
             </div>
         );
     }
