@@ -6,7 +6,6 @@ const App = () => {
     <>
       <MyComponents name="ReactJS" />
       <MyComponents age={100} />
-
       <hr/>
       <MyComponentsFunc name="함수형">
         <p>함수형 컴포넌트의 하위 엘리먼트</p>
