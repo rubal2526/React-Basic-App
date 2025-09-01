@@ -2,14 +2,19 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class MyComponents extends Component {
+    //컴포넌트 내부에 상태변수를 포함하는 state 객체선언
+    state = {
+        value: 0,
+    };
     render() {
         //desrtucring assignment
         const { name,age } = this.props;
-
+        const { value } = this.state;
         return (
             <div>
                 <h2>클래스 타입 컴포넌트</h2>
                 <h3>Hello! {name} - {age}</h3>
+                <p>상태변수 value = {value}</p>
             </div>
         );
     }
@@ -17,7 +22,6 @@ class MyComponents extends Component {
 MyComponents.defaultProps = {
     name: '리액트JS'
 };
-
 MyComponents.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number.isRequired
