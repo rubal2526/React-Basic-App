@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 const MyComponentFunc = ({ name, children }) => {
     //useState() 함수사용
     const [value,setValue] = useState(0);
+    const [inputs, setInpusts] = useState({
+        message: '', 
+        username: ''
+    });
+
+    const { message, username} = inputs;
 
     return (
         <div>
